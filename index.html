@@ -7,18 +7,23 @@
     <title>Моя тестовая страница</title>
   </head>
   <body>
-      <h1> My main header</h1>
-      <h2> My second header</h2>
+      <ul id="navbar">
+        <li><a href="#">Main</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contacts</a>
+          <ul>
+            <li><a href="#">Adress</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" title="about me)">About</a></li>
+      </ul>
+    <h1> My main header</h1>
     <img src="images/web-icon.png" alt="Minimalistic landscape">
-    <p>Добро пожаловать на мой Web-сайт. Я начинающий Web-разработчик.</p>
-    <p>Mozilla, мы являемся мировым сообществом </p>
-        <ul> 
-            <li> технологов, </li>
-            <li> мыслителей </li>
-            <li> и строителей, </li>
-        </ul>
-    <p> работающих вместе ... </p>
+    <p class="editor-note">Добро пожаловать на мой Web-сайт. Я начинающий Web-разработчик.</p>
     <a href="https://www.mozilla.org/ru/about/manifesto/details/">Манифест Mozilla</a>
+    <p> </p>
     <button>Change user</button>
     <script src="scripts/main.js"></script>
   </body>
