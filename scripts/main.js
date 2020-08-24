@@ -1,30 +1,15 @@
-var myImage = document.querySelector('img');
-
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/web-icon.png') {
-      myImage.setAttribute ('src','images/alt-img.png');
-    } else {
-      myImage.setAttribute ('src','images/web-icon.png');
-    }
-}
-
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
-
-function setUserName() {
-    var myName = prompt('Please enter your name.');
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Welcome, ' + myName;
-  }
-
-  if(!localStorage.getItem('name')) {
-    setUserName();
-  } else {
-    var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Welcome, ' + storedName;
-  }
-
-  myButton.onclick = function() {
-    setUserName();
-  }
+  $(function() {
+    window.addEventListener("scroll", function(event){
+  
+      var top = this.pageYOffset;
+  
+      var layers = $(".parallax__layer");
+      var layer, speed, yPos;
+      layers.each(function() {
+        speed = $(this).attr('data-speed');
+        console.log(speed);
+        var yPos = -(top * speed / 100);
+        $(this).attr('style','transform: translate3d(0px, ' + yPos + 'px, 0px)');
+      });
+    });
+  });
